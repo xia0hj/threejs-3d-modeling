@@ -146,7 +146,7 @@ export class SketchObjectManager implements Module {
 /**
  * @exports
  */
-export interface SketchObjectTreeItem {
+export type SketchObjectTreeItem = {
     id: number
     obj: SketchObject
     children: Map<number, SketchObjectTreeItem>

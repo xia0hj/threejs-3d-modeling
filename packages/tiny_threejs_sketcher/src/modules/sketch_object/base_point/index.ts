@@ -22,7 +22,7 @@ void main() {
 }
 `
 
-export interface BasePointProps {
+export type BasePointProps = {
     /** @default true */
     isConnectable?: boolean
 }

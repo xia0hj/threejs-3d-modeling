@@ -49,7 +49,7 @@ export class PlaneEditor implements Controller {
     }
 }
 
-interface DrawPath {
+type DrawPath = {
     id: number
     start: Vector2
     end: Vector2

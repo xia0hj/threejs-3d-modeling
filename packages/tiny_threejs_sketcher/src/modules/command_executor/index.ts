@@ -9,7 +9,7 @@ import {
 import { checkIsUndoableCommand } from "@src/utils"
 import { logger } from "@src/utils/logger"
 
-export interface Command {
+export type Command = {
     name: string
     execute: (getModule: ModuleGetter) => Result<unknown, Error>
     undo?: (getModule: ModuleGetter) => Result<unknown, Error>

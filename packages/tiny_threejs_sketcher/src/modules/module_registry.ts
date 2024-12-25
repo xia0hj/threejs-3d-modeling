@@ -47,7 +47,7 @@ export const MODULE_NAME = Object.freeze(
     ),
 ) as Readonly<{ [K in ModuleNameUnion]: K }>
 
-export interface Module {
+export type Module = {
     name: ModuleNameUnion
     dispose?: () => void
 }

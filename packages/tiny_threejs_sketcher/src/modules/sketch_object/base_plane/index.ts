@@ -14,7 +14,7 @@ import {
     Vector3,
 } from "three"
 
-export interface CreateBasePlaneParameter {
+export type CreateBasePlaneParameter = {
     parallelTo: "XY" | "XZ" | "YZ"
     offset: number
 }

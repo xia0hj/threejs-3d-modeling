@@ -6,7 +6,7 @@ import { CommandCreateBasePlane } from "tiny_threejs_sketcher"
 
 import style from "./index.module.less"
 
-interface FieldType {
+type FieldType = {
     parallelTo: "XY" | "XZ" | "YZ"
     offset: number
 }

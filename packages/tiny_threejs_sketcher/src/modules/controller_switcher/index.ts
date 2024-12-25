@@ -11,7 +11,7 @@ import {
 } from "@src/modules/module_registry"
 import { err } from "neverthrow"
 
-export interface Controller {
+export type Controller = {
     readonly name: ControllerNameUnion
     readonly prev: ControllerNameUnion
 
@@ -83,10 +83,7 @@ export class ControllerSwitcher implements Module {
     }
 
     public pushController<C extends Controller>(controller: C) {
-        if (
-            controller.prev != undefined
-            && controller.prev !== this.getCurController().name
-        ) {
+        if (controller.prev != null && controller.prev !== this.getCurController().name) {
             return err(
                 new Error(
                     `${controller.name} 入栈失败，所需栈顶为 ${

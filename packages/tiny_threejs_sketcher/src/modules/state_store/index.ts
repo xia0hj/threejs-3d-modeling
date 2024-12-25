@@ -17,7 +17,7 @@ import mitt from "mitt"
 /**
  * @exports
  */
-export interface SketcherState {
+export type SketcherState = {
     curCameraType: ValueOf<typeof CAMERA_TYPE>
     controller: ControllerNameUnion
 

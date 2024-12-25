@@ -8,7 +8,7 @@ import type { Solid } from "@src/modules/sketch_object/solid"
 import type { ValueOf } from "@src/utils"
 import type { Object3D } from "three"
 
-export interface SketchObject extends Object3D {
+export type SketchObject = {
     userData: { type: ValueOf<typeof SKETCH_OBJECT_TYPE> }
     onPointerEnter?: () => void
     onPointerLeave?: () => void
@@ -16,7 +16,7 @@ export interface SketchObject extends Object3D {
     onDeselect?: () => void
     cloneAsSketchObject?: () => Object3D
     dispose: () => void
-}
+} & Object3D
 
 export type SketchObjecTypetUnion =
     | BasePlane

@@ -15,5 +15,7 @@ export default antfu({
         "eqeqeq": ["error", "allow-null"],
         "jsonc/indent": ["error", 2],
         "react/no-missing-key": "warn",
+        "no-console": "warn",
+        "ts/consistent-type-definitions": ["error", "type"],
     },
 })

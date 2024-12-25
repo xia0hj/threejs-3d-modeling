@@ -1,12 +1,12 @@
+import { Button, Divider, Tooltip } from "antd"
 import {
-    FunctionComponent,
+    type FunctionComponent,
     type ReactElement,
-    ReactNode,
+    type ReactNode,
     useState,
 } from "react"
-import { Button, Divider, Tooltip } from "antd"
 
-export interface ToolbarButton {
+export type ToolbarButton = {
     label: string
     icon: (props: any) => ReactNode
     DetailsView?: (props: { exit: () => void }) => ReactElement
