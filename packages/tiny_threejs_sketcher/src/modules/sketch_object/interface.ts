@@ -9,19 +9,19 @@ import type { ValueOf } from "@src/utils"
 import type { Object3D } from "three"
 
 export type SketchObject = {
-    userData: { type: ValueOf<typeof SKETCH_OBJECT_TYPE> }
-    onPointerEnter?: () => void
-    onPointerLeave?: () => void
-    onSelect?: () => void
-    onDeselect?: () => void
-    cloneAsSketchObject?: () => Object3D
-    dispose: () => void
+	userData: { type: ValueOf<typeof SKETCH_OBJECT_TYPE> }
+	onPointerEnter?: () => void
+	onPointerLeave?: () => void
+	onSelect?: () => void
+	onDeselect?: () => void
+	cloneAsSketchObject?: () => Object3D
+	dispose: () => void
 } & Object3D
 
 export type SketchObjecTypetUnion =
-    | BasePlane
-    | BasePoint
-    | Line2d
-    | Circle2d
-    | BaseFace
-    | Solid
+	| BasePlane
+	| BasePoint
+	| Line2d
+	| Circle2d
+	| BaseFace
+	| Solid

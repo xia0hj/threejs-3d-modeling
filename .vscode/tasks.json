@@ -1,46 +1,46 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "dev_build",
-      "dependsOn": ["dev_dts", "dev_esbuild", "dev_web"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "label": "dev_esbuild",
-      "path": "packages/tiny_threejs_sketcher",
-      "type": "npm",
-      "script": "dev_esbuild",
-      "presentation": {
-        "group": "dev"
-      },
-      "isBackground": true,
-      "hide": true
-    },
-    {
-      "label": "dev_dts",
-      "path": "packages/tiny_threejs_sketcher",
-      "type": "npm",
-      "script": "dev_dts",
-      "presentation": {
-        "group": "dev"
-      },
-      "isBackground": true,
-      "hide": true
-    },
-    {
-      "label": "dev_web",
-      "path": "packages/web_ui",
-      "type": "npm",
-      "script": "dev",
-      "presentation": {
-        "group": "dev"
-      },
-      "isBackground": true,
-      "hide": true
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "dev_build",
+			"dependsOn": ["dev_dts", "dev_esbuild", "dev_web"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "dev_esbuild",
+			"path": "packages/tiny_threejs_sketcher",
+			"type": "npm",
+			"script": "dev_esbuild",
+			"presentation": {
+				"group": "dev"
+			},
+			"isBackground": true,
+			"hide": true
+		},
+		{
+			"label": "dev_dts",
+			"path": "packages/tiny_threejs_sketcher",
+			"type": "npm",
+			"script": "dev_dts",
+			"presentation": {
+				"group": "dev"
+			},
+			"isBackground": true,
+			"hide": true
+		},
+		{
+			"label": "dev_web",
+			"path": "packages/web_ui",
+			"type": "npm",
+			"script": "dev",
+			"presentation": {
+				"group": "dev"
+			},
+			"isBackground": true,
+			"hide": true
+		}
+	]
 }

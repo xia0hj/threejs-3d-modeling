@@ -12,42 +12,42 @@ import { err, ok } from "neverthrow"
  * @exports
  */
 export class CommandEnableFaceSelector implements Command {
-    name = "enable_face_selector"
+	name = "enable_face_selector"
 
-    execute(getModule: ModuleGetter) {
-        return getModule(MODULE_NAME.ControllerSwitcher).pushController(
-            new FaceSelector(),
-        )
-    }
+	execute(getModule: ModuleGetter) {
+		return getModule(MODULE_NAME.ControllerSwitcher).pushController(
+			new FaceSelector(),
+		)
+	}
 }
 
 /**
  * @exports
  */
 export class CommandExtrudeSelectedFace implements Command {
-    name = "extrude_selected_face"
+	name = "extrude_selected_face"
 
-    depth: number
-    solid?: Solid
+	depth: number
+	solid?: Solid
 
-    constructor(depth: number) {
-        this.depth = depth
-    }
+	constructor(depth: number) {
+		this.depth = depth
+	}
 
-    execute(getModule: ModuleGetter) {
-        const [face] = getModule(MODULE_NAME.StateStore).getState().selectedObjects
-        if (!checkSketchObjectType(face, SKETCH_OBJECT_TYPE.base_face)) {
-            return err(new Error(`无法拉伸 ${face.userData.type} 对象`))
-        }
+	execute(getModule: ModuleGetter) {
+		const [face] = getModule(MODULE_NAME.StateStore).getState().selectedObjects
+		if (!checkSketchObjectType(face, SKETCH_OBJECT_TYPE.base_face)) {
+			return err(new Error(`无法拉伸 ${face.userData.type} 对象`))
+		}
 
-        this.solid = new Solid(face, this.depth)
-        getModule(MODULE_NAME.SketchObjectManager).add(this.solid)
-        logger.info("拉伸成功", this.solid)
-        return ok(this.solid)
-    }
+		this.solid = new Solid(face, this.depth)
+		getModule(MODULE_NAME.SketchObjectManager).add(this.solid)
+		logger.info("拉伸成功", this.solid)
+		return ok(this.solid)
+	}
 
-    undo() {
-        this.solid?.dispose()
-        return ok(this.solid)
-    }
+	undo() {
+		this.solid?.dispose()
+		return ok(this.solid)
+	}
 }

@@ -9,24 +9,24 @@ import { btnStartSelectExtrudeFace } from "@src/containers/toolbar_buttons/extru
 import style from "./index.module.less"
 
 const mainToolbarButtons: ToolbarButton[] = [
-    btnCreateBasePlane,
-    btnEditBasePlane,
-    btnStartSelectExtrudeFace,
+	btnCreateBasePlane,
+	btnEditBasePlane,
+	btnStartSelectExtrudeFace,
 ] as const
 
 export function App() {
-    const canvasRef = useTinyThreejsSketcher()
+	const canvasRef = useTinyThreejsSketcher()
 
-    return (
-        <div className={style.app}>
-            <div className={style.app_navbar}></div>
-            <div className={style.app_main}>
-                <div className={style.left_sidebar}>
-                    <Toolbar toolbarButtons={mainToolbarButtons} />
-                    <SketchObjectTree />
-                </div>
-                <canvas className={style.app_canvas} ref={canvasRef} />
-            </div>
-        </div>
-    )
+	return (
+		<div className={style.app}>
+			<div className={style.app_navbar}></div>
+			<div className={style.app_main}>
+				<div className={style.left_sidebar}>
+					<Toolbar toolbarButtons={mainToolbarButtons} />
+					<SketchObjectTree />
+				</div>
+				<canvas className={style.app_canvas} ref={canvasRef} />
+			</div>
+		</div>
+	)
 }

@@ -6,8 +6,8 @@ import { MODULE_NAME } from "@src/modules/module_registry"
  * @exports
  */
 export class CommandExitCurController implements Command {
-    name = "exit_cur_controller"
-    execute(getModule: ModuleGetter) {
-        return getModule(MODULE_NAME.ControllerSwitcher).popController()
-    }
+	name = "exit_cur_controller"
+	execute(getModule: ModuleGetter) {
+		return getModule(MODULE_NAME.ControllerSwitcher).popController()
+	}
 }
