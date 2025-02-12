@@ -6,7 +6,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "vitest run",
-    "dev_esbuild": "esbuild src/index.ts --format=esm --bundle --packages=external --outfile=dist/index.js --sourcemap --watch",
+    "dev_esbuild": "node esbuild.mjs",
+    "dev_esbuild_bak": "esbuild src/index.ts --format=esm --bundle --packages=external --outfile=dist/index.js --sourcemap --watch",
     "dev_dts": "tspc --watch",
     "prod_build": "npm run prod_before && npm run prod_esbuild && npm run prod_dts",
     "prod_before": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",

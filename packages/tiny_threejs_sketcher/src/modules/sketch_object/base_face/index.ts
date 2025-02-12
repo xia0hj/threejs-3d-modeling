@@ -4,7 +4,8 @@ import type {
     Vector3,
     Vector3Tuple,
 } from "three"
-import { SKETCH_OBJECT_TYPE } from "@src/index"
+import { SKETCH_OBJECT_TYPE } from "@src/constant/enum"
+
 import {
     Mesh,
     MeshStandardMaterial,

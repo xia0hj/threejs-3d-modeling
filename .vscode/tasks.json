@@ -17,6 +17,7 @@
       "presentation": {
         "group": "dev"
       },
+      "isBackground": true,
       "hide": true
     },
     {
@@ -27,6 +28,7 @@
       "presentation": {
         "group": "dev"
       },
+      "isBackground": true,
       "hide": true
     },
     {
@@ -37,6 +39,7 @@
       "presentation": {
         "group": "dev"
       },
+      "isBackground": true,
       "hide": true
     }
   ]

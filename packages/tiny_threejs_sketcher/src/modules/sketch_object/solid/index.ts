@@ -4,7 +4,8 @@ import type {
     BufferGeometry,
     MeshStandardMaterial,
 } from "three"
-import { SKETCH_OBJECT_TYPE } from "@src/index"
+
+import { SKETCH_OBJECT_TYPE } from "@src/constant/enum"
 import { logger } from "@src/utils/logger"
 import {
     ExtrudeGeometry,

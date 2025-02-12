@@ -55,7 +55,7 @@ export class BasePlane
             : createPlaneParameter.parallelTo === "XZ"
                 ? [0, 1, 0]
                 : [1, 0, 0],
-            constant: createPlaneParameter.offset,
+            constant: -createPlaneParameter.offset,
         }
         this.plane = new Plane(
             new Vector3().fromArray(this.userData.normal),
