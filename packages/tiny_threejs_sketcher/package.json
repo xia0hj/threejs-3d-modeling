@@ -16,12 +16,14 @@
 	},
 	"dependencies": {
 		"geometric": "^2.5.5",
+		"lodash-es": "^4.17.21",
 		"mitt": "^3.0.1",
 		"neverthrow": "^8.0.0",
 		"three": "^0.169.0"
 	},
 	"devDependencies": {
 		"@types/geometric": "^2.5.3",
+		"@types/lodash-es": "^4.17.12",
 		"@types/three": "^0.169.0",
 		"dts-bundle-generator": "^9.5.1",
 		"esbuild": "^0.24.0",
